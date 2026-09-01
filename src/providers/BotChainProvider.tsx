@@ -60,7 +60,7 @@ export function BotChainProvider({ children }: { children: ReactNode }) {
         params: [{ chainId: BOT_CHAIN.chainIdHex }],
       });
     } catch (switchError: any) {
-      // Chain not added to wallet — add it
+      // Chain not added to wallet - add it
       if (switchError.code === 4902 || switchError.message?.includes("Unrecognized chain ID")) {
         try {
           await window.ethereum.request({
