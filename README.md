@@ -85,7 +85,14 @@ cp .env.example .env
 forge script script/Deploy.s.sol --rpc-url https://rpc.botchain.ai --broadcast --verify
 ```
 
-After deployment, update contract addresses in `src/lib/constants.ts`.
+### Contract Addresses (BOT Chain Mainnet)
+
+| Contract | Address |
+| :--- | :--- |
+| **NodeRegistry** | [`0x80eeedf05955a93fa4f42c16805f40da0b15f6be`](https://scan.botchain.ai/address/0x80eeedf05955a93fa4f42c16805f40da0b15f6be) |
+| **RewardPool** | [`0xcff046c4bcbab4f25254fd41d94f8acd7a3334fa`](https://scan.botchain.ai/address/0xcff046c4bcbab4f25254fd41d94f8acd7a3334fa) |
+
+Addresses are set in `src/lib/constants.ts`.
 
 ---
 
