@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { BotChainProvider } from "@/providers/BotChainProvider";
+import BotChainProofCard from "@/components/BotChainProofCard";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains", display: "swap" });
@@ -18,6 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <BotChainProvider>
           <div className="flex-grow flex flex-col">{children}</div>
           <footer className="w-full border-t border-white/[0.08] py-6 px-6 bg-[#08090d]/90 backdrop-blur-md">
+            <div className="max-w-7xl mx-auto mb-6">
+              <BotChainProofCard />
+            </div>
             <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono text-zinc-500">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-400" />
